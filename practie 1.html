@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 1</title>
+</head>
+<body>
+<h1> Find the even or odd Number</h1>
+<p> Enter the Answer for "7+4"=</p>
+<input id="userInput" type="text">
+<button id="checkAnswer" type="button"> Check your answer</button>
+
+<script>
+document.getElementById("checkAnswer").onclick = function(){
+var userInput= document.getElementById("userInput").value;
+    
+if(userInput==11){
+    alert("Great Job!");
+}
+else{
+    alert("try again and again ");
+}
+    }
+</script>
+
+
+</body>
+</html>
