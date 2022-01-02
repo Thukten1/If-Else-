@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 1</title>
+</head>
+<body>
+<h1> Java Script Random Number</h1>
+<p id="resultStat"> </p>
+<p id="problem"></p>
+<input id="userAnswer" type="text">
+<button id="checkAnswer" type="button"> Check answer</button>
+
+<script>
+   var random1;
+    var random2;
+    var numAttempt=0;
+    var numCorrect=0;
+function displayEquation(){
+
+random1= Math.floor(Math.random()*10);
+random2= Math.floor(Math.random()*10);
+
+var problem = random1 +  "+" + random2 + "=" ;
+
+
+document.getElementById("problem").innerHTML=problem;
+}
+
+ displayEquation();
+
+
+//after user click on the check item button 
+document.getElementById("checkAnswer").onclick=function(){
+numAttempt++;
+//get the user answer
+var userAnswer= document.getElementById("userAnswer").value;
+//calculate the correct answer
+var key= random1 + random2;
+
+
+if(userAnswer==key){
+
+numCorrect++;
+
+    alert("Great Job!");
+}
+else{
+    alert("try again and again ");
+}
+
+displayEquation();
+
+document.getElementById("resultStat").innerHTML= "Total Attempt "
+ + numAttempt + "<br> Number Correct "+ numCorrect +"<br> Attempt Percentage = " + (numCorrect/numAttempt).toFixed(2)*100;
+} 
+</script>
+
+
+</body>
+</html>
