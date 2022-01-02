@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 1</title>
+</head>
+<body>
+<h1> Java Script Random Number</h1>
+<p id="problem"></p>
+<input id="userInput" type="text">
+<button id="checkAnswer" type="button"> Check answer</button>
+
+<script>
+var random1= Math.floor(Math.random()*10);
+var random2= Math.floor(Math.random()*10);
+
+var problem = random1 +  "+" + random2 + "=" ;
+document.getElementById("problem").innerHTML=problem;
+
+//after user click on the check item button 
+document.getElementById("checkAnswer").onclick=function(){
+//get the user answer
+var userInput= document.getElementById("userInput").value;
+
+var key= random1 + random2;
+
+
+if(userInput==key){
+
+
+    alert("Great Job!");
+}
+else{
+    alert("try again and again ");
+}
+} 
+</script>
+
+
+</body>
+</html>
